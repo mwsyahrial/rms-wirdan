@@ -120,18 +120,18 @@ public class UserDaoImpl implements UserDao
         return false;
     }
     //add for login
-    
+
     @Override
     public boolean validate(User user)
     {
-    	boolean status = false;
+
         try (Connection connection = DataSourceFactory.getConnection())
         {
-            PreparedStatement stmt = connection.prepareStatement("SELECT * FROM user WHERE user_name=? and password=?");
+            PreparedStatement stmt = connection.prepareStatement("SELECT * FROM user WHERE user_name=? AND password=?");
             stmt.setString(1, user.getUserName());
             stmt.setString(2, user.getPassword());
             ResultSet rs = stmt.executeQuery();
-            status=rs.next();
+            return rs.next();
       
           
         }
@@ -140,7 +140,7 @@ public class UserDaoImpl implements UserDao
             ex.printStackTrace();
         }
 
-        return status;
+        return false;
     }
     //end login
     @Override

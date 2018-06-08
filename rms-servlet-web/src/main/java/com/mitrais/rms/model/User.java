@@ -13,6 +13,12 @@ public class User
         this.password = password;
     }
 
+    public User() {
+        this.userName = userName;
+        this.password = password;
+    }
+
+
     public Long getId() {
         return id;
     }

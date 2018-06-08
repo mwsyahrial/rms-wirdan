@@ -2,6 +2,10 @@ package com.mitrais.rms.dao;
 
 import com.mitrais.rms.model.User;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Optional;
 
 /**
@@ -9,6 +13,7 @@ import java.util.Optional;
  */
 public interface UserDao extends Dao<User, Long>
 {
+
     /**
      * Find {@link User} by its username
      * @param userName username

@@ -42,8 +42,9 @@ public interface Dao<T, ID>
      * @return true if operaion success
      */
     boolean delete(T o);
-    
+
     //login
-    boolean validate(T o);
-    
+    boolean validate(T o) ;
+
+
 }
