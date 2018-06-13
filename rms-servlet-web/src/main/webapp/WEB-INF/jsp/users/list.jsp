@@ -23,9 +23,10 @@
 <body>
     <div class="mdl-layout mdl-js-layout mdl-color--grey-100 box-center">
     	<main class="mdl-layout__content">
-    		<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+    		<table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp">
               <thead>
                 <tr>
+
                   <th class="mdl-data-table__cell--non-numeric">User Name</th>
                   <th>Password</th>
                 </tr>
@@ -33,12 +34,18 @@
               <tbody>
               <c:forEach items = "${users}" var="user">
                   <tr>
-                    <td class="mdl-data-table__cell--non-numeric"><c:out value = "${user.userName}"/></td>
+                    <td class="mdl-data-table__cell--non-numeric">
+
+                    <c:out value = "${user.userName}" /></td>
                     <td><c:out value = "${user.password}"/></td>
-                  </tr>
+                    <td><c:out value = "${user.id}" /></td>
+                    <td><a href="?action=update&id=<c:out value="${user.id}"/>">UPDATE</td>
+                    <td><a href="?action=delete&id=<c:out value="${user.id}"/>">DELETE</td>
+                                      </tr>
               </c:forEach>
               </tbody>
             </table>
+
     	</main>
     </div>
   <script src="js/scripts.js"></script>

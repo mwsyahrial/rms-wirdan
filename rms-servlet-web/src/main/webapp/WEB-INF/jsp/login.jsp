@@ -36,8 +36,8 @@
     						<input class="mdl-textfield__input" type="password" id="userpass" name = "userpass" />
     						<label class="mdl-textfield__label" for="userpass">Password</label>
     					</div>
-    					<div class="mdl-card__actions mdl-card--border">
-    				<button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Log in</button>
+
+    				    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Log in</button>
     			       </div>
     				</form>
     			</div>

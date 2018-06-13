@@ -27,8 +27,11 @@
     				<h2 class="mdl-card__title-text">RMS</h2>
     			</div>
     	  	<div class="mdl-card__supporting-text">
-    				<form action="form" method = "post">
-
+    				<form action="update" method = "post">
+                            <div class="mdl-textfield mdl-js-textfield">
+    						<input class="mdl-textfield__input" type="text" id="id" name="id"/>
+    						<label class="mdl-textfield__label" for="id">ID</label>
+    					</div>
     					<div class="mdl-textfield mdl-js-textfield">
     						<input class="mdl-textfield__input" type="text" id="username" name="username" />
     						<label class="mdl-textfield__label" for="username">Username</label>
@@ -38,8 +41,8 @@
     						<label class="mdl-textfield__label" for="userpass">Password</label>
     					</div>
 
-                          	<button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Save</button>
 
+                          	<button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Update</button>
                          </div>
     				</form>
     			</div>

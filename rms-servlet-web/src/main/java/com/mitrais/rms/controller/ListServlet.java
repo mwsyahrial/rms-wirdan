@@ -13,11 +13,11 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet("/login")
-public class LoginServlet extends AbstractController
+@WebServlet("/list")
+public class ListServlet extends AbstractController
 {
 
-	//original code
+    //original code
 //    @Override
 //    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
 //    {
@@ -33,7 +33,7 @@ public class LoginServlet extends AbstractController
 //
 //    }
 
-	//mycode
+    //mycode
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
     {
@@ -46,8 +46,10 @@ public class LoginServlet extends AbstractController
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         try {
-
+//            checkboxObject.checked
+            String[] checkeditems =req.getParameterValues("check");
             User user = new User();
+//            user.setId(req.getParameter(""));
             user.setUserName(req.getParameter("username"));
             user.setPassword(req.getParameter("userpass"));
 
@@ -70,7 +72,7 @@ public class LoginServlet extends AbstractController
 
 
     }
-        
-    
+
+
 
 }

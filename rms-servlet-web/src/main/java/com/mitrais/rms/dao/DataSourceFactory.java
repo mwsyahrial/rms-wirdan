@@ -5,6 +5,7 @@ import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.ResourceBundle;
 
 /**
  * This class provides MySQL datasource to be used to connect to database.
@@ -18,11 +19,12 @@ public class DataSourceFactory
     {
         MysqlDataSource dataSource = new MysqlDataSource();
         // TODO: make these database setting configurable by moving to properties file
-        dataSource.setDatabaseName("rmsdb");
-        dataSource.setServerName("localhost");
-        dataSource.setPort(3306);
-        dataSource.setUser("rms");
-        dataSource.setPassword("rms");
+        ResourceBundle props = ResourceBundle.getBundle("database");
+        dataSource.setDatabaseName(props.getString("dbname"));
+        dataSource.setServerName(props.getString("dbhost"));
+        dataSource.setPort(Integer.valueOf(props.getString("dbport")));
+        dataSource.setUser(props.getString("dbuser"));
+        dataSource.setPassword(props.getString("dbpassword"));
         this.dataSource = dataSource;
     }
 

@@ -1,11 +1,12 @@
 package com.mitrais.rms.model;
 
-public class User
-{
+public class User {
     private Long id;
     private String userName;
     private String password;
-   
+
+    public User() {
+    }
 
     public User(Long id, String userName, String password) {
         this.id = id;
@@ -13,14 +14,12 @@ public class User
         this.password = password;
     }
 
-    public User() {
-        this.userName = userName;
-        this.password = password;
-    }
-
-
     public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getUserName() {
@@ -38,6 +37,6 @@ public class User
     public void setPassword(String password) {
         this.password = password;
     }
-    
-  
+
+
 }
